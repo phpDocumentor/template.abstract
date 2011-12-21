@@ -8,6 +8,8 @@
         <script type="text/javascript" src="{$root}js/jquery.panzoom.js"></script>
         <script>
             $(document).ready(function () {
+                $('#pan').css('width', jQuery(document).width() - 15);
+                $('#pan').css('height', jQuery(document).height() - jQuery('#intro').height() - 15);
                 $('#pan img').panZoom({
                     'directedit': true,
                     'debug':      false,
@@ -15,10 +17,17 @@
                 });
                 $('#pan img').panZoom('fit');
             });
+
+            $(window).resize(function () {
+                $('#pan').css('width', jQuery(document).width() - 15);
+                $('#pan').css('height', jQuery(document).height() - jQuery('#intro').height() - 15);
+                $('#pan img').css('width', jQuery('#pan').width());
+                $('#pan img').css('height', jQuery('#pan').height());
+            });
         </script>
 
         <div id="content">
-            <div style="font-size: 10px; white-space: normal;">
+            <div id="intro" style="font-size: 10px; white-space: normal;">
                 The following actions are supported in this diagram:
                 <ul>
                     <li>
@@ -32,7 +41,7 @@
                 </ul>
             </div>
 
-            <div id="pan" style="width: 600px; height: 600px; overflow: hidden"><img src="classes.svg" /></div>
+            <div id="pan" style="overflow: hidden"><img src="classes.svg" /></div>
         </div>
     </xsl:template>
 

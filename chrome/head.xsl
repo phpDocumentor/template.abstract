@@ -7,6 +7,7 @@
         <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
         <link rel="stylesheet" href="{$root}css/template.css" type="text/css" />
         <script type="text/javascript" src="{$root}js/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="{$root}js/jquery.tools.min.js"></script>
         <script type="text/javascript" src="{$root}js/jquery-ui-1.8.2.custom.min.js"></script>
         <script type="text/javascript" src="{$root}js/template.js"></script>
     </xsl:template>
