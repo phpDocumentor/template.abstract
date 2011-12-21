@@ -4,7 +4,7 @@
   <author>Mike van Riel</author>
   <email>mike.vanriel@naenius.com</email>
   <description>This is the default theme for DocBlox</description>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <transformations>
     <transformation query="copy" writer="FileIo" source="js" artifact="js"/>
     <transformation query="copy" writer="FileIo" source="images" artifact="images"/>
