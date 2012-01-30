@@ -3,7 +3,7 @@
 
     <xsl:template name="sidebar-section-api">
         <div style="padding: 0px;">
-            <ul id="api-" class="filetree">
+            <ul id="api-" class="filetree sidebar-nav-tree">
             <xsl:for-each select="/project/file/*">
                 <xsl:sort select="./name" />
 

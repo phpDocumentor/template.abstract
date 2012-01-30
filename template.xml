@@ -3,11 +3,12 @@
 <template>
   <author>Mike van Riel</author>
   <email>mike.vanriel@naenius.com</email>
-  <description>This is the default theme for DocBlox</description>
-  <version>1.0.1</version>
+  <description>This is the default theme for phpDocumentor</description>
+  <version>1.0.2</version>
   <transformations>
     <transformation query="copy" writer="FileIo" source="js" artifact="js"/>
     <transformation query="copy" writer="FileIo" source="images" artifact="images"/>
+    <transformation query="copy" writer="FileIo" source="templates/abstract/images" artifact="images"/>
     <transformation query="copy" writer="FileIo" source="templates/abstract/css" artifact="css"/>
     <transformation query="copy" writer="FileIo" source="templates/abstract/js" artifact="js"/>
     <transformation query="" writer="xsl" source="templates/abstract/index.xsl" artifact="index.html"/>

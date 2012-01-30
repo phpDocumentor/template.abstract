@@ -10,7 +10,7 @@
             <xsl:when test="$title != ''">
                 <xsl:value-of select="$title"/>
             </xsl:when>
-            <xsl:otherwise>DocBlox Documentation</xsl:otherwise>
+            <xsl:otherwise>phpDocumentor Documentation</xsl:otherwise>
         </xsl:choose>
     </xsl:template>
 
