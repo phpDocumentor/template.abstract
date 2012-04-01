@@ -12,7 +12,7 @@
     <xsl:template match="/project/file">
       <li class="closed">
         <span class="file">
-            <a href="{$root}{@generated-path}" target="content">
+            <a href="{$root}files/{@generated-path}" target="content">
                 <xsl:value-of select="@path" />
             </a>
         </span>
@@ -22,7 +22,7 @@
               <xsl:for-each select="constant">
                 <li>
                   <span class="constant">
-                    <a href="{$root}{../@generated-path}#::{name}" target="content">
+                    <a href="{$root}files/{../@generated-path}#::{name}" target="content">
                       <xsl:value-of select="name" /><br/>
                     </a>
                   </span>
@@ -31,7 +31,7 @@
               <xsl:for-each select="function">
                 <li>
                   <span class="function">
-                    <a href="{$root}{../@generated-path}#::{name}()" target="content">
+                    <a href="{$root}files/{../@generated-path}#::{name}()" target="content">
                       <xsl:value-of select="name" /><br/>
                     </a>
                   </span>
@@ -40,7 +40,7 @@
               <xsl:for-each select="class|interface">
                 <li>
                   <span class="{name()}">
-                    <a href="{$root}{../@generated-path}#{full_name}" target="content">
+                    <a href="{$root}files/{../@generated-path}#{full_name}" target="content">
                       <xsl:value-of select="name" /><br/>
                     </a>
                   </span>

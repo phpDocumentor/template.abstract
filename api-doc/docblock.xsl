@@ -40,7 +40,7 @@
       </xsl:if>
 
       <xsl:if test="@link">
-        <a href="{$root}{@link}">
+        <a href="{$root}files/{@link}">
           <xsl:value-of select="." />
         </a>
       </xsl:if>
@@ -119,7 +119,7 @@
     </dt>
     <dd>
         <xsl:if test="@link">
-            <a href="{$root}{@link}">
+            <a href="{$root}file/{@link}">
                 <xsl:value-of select="@description" disable-output-escaping="yes"/>
             </a>
         </xsl:if>
@@ -180,7 +180,7 @@
     <xsl:if test="not(.)">n/a</xsl:if>
     <xsl:if test=".">
       <xsl:if test="../@link">
-        <a href="{$root}{../@link}">
+        <a href="{$root}files/{../@link}">
           <xsl:value-of select="." />
         </a>
       </xsl:if>
@@ -204,7 +204,7 @@
     <xsl:if test="not(../@description)">n/a</xsl:if>
     <xsl:if test="../@description">
       <xsl:if test="../@link">
-        <a href="{$root}{../@link}">
+        <a href="{$root}files/{../@link}">
           <xsl:value-of select="../@description" disable-output-escaping="yes"/>
         </a>
       </xsl:if>

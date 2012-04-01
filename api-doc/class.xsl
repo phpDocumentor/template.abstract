@@ -8,7 +8,7 @@
         <xsl:if test="not(.)">n/a</xsl:if>
         <xsl:if test=".">
             <xsl:if test="@link">
-                <a href="{$root}{@link}"><xsl:value-of select="."/></a>
+                <a href="{$root}files/{@link}"><xsl:value-of select="."/></a>
             </xsl:if>
             <xsl:if test="not(@link)">
                 <xsl:if test=". = ''">?</xsl:if>
@@ -23,7 +23,7 @@
         <xsl:param name="class"/>
         <xsl:param name="depth"/>
 
-        <a href="{concat($root, $class/../@generated-path, '#', $class/full_name)}">
+        <a href="{concat($root, 'files/', $class/../@generated-path, '#', $class/full_name)}">
             <xsl:if test="$depth != 0">
                 <xsl:attribute name="style">color: gray; font-size: 0.8em
                 </xsl:attribute>
@@ -74,7 +74,7 @@
                                 <xsl:value-of select="."/>
                             </xsl:if>
                             <xsl:if test="@link != ''">
-                                <a href="{@link}">
+                                <a href="{$root}files/{@link}">
                                     <xsl:value-of select="."/>
                                 </a>
                             </xsl:if>
@@ -105,7 +105,7 @@
                     <dt>Children</dt>
                     <xsl:for-each select="/project/file/*[extends=$full_name]">
                         <dd>
-                            <a href="{concat($root, ../@generated-path, '#', full_name)}">
+                            <a href="{concat($root, 'files/', ../@generated-path, '#', full_name)}">
                                 <xsl:value-of select="full_name"/>
                             </a>
                         </dd>

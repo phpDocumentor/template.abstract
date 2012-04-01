@@ -11,7 +11,7 @@
                     <xsl:comment>Class|Interface level</xsl:comment>
                     <li class="closed">
                         <span class="{name()}">
-                            <a href="{$root}{../@generated-path}#{./full_name}" target="content">
+                            <a href="{$root}files/{../@generated-path}#{./full_name}" target="content">
                                 <xsl:value-of select="./full_name" />
                             </a>
                         </span>
@@ -24,17 +24,17 @@
                             <span class="{$className}">
                             <xsl:choose>
                                 <xsl:when test="name(../..) = 'method'">
-                                    <a class="{../../@visibility}" href="{$root}{../../../../@generated-path}#{../../../full_name}::{../../name}()" target="content">
+                                    <a class="{../../@visibility}" href="{$root}files/{../../../../@generated-path}#{../../../full_name}::{../../name}()" target="content">
                                     <xsl:value-of select="../../name" />
                                     </a>
                                 </xsl:when>
                                 <xsl:when test="name(../..) = 'constant'">
-                                    <a class="{../../@visibility}" href="{$root}{../../../../@generated-path}#{../../../full_name}::{../../name}" target="content">
+                                    <a class="{../../@visibility}" href="{$root}files/{../../../../@generated-path}#{../../../full_name}::{../../name}" target="content">
                                     <xsl:value-of select="../../name" />
                                     </a>
                                 </xsl:when>
                                 <xsl:when test="name(../..) = 'property'">
-                                    <a class="{../../@visibility}" href="{$root}{../../../../@generated-path}#{../../../full_name}::{../../name}" target="content">
+                                    <a class="{../../@visibility}" href="{$root}files/{../../../../@generated-path}#{../../../full_name}::{../../name}" target="content">
                                     <xsl:value-of select="../../name" />
                                     </a>
                                 </xsl:when>
@@ -59,27 +59,27 @@
                         <span class="{name()}">
                         <xsl:choose>
                             <xsl:when test="name() = 'file'">
-                                <a href="{$root}{../@generated-path}" target="content">
+                                <a href="{$root}files/{../@generated-path}" target="content">
                                     <xsl:value-of select="./name" />
                                 </a>
                             </xsl:when>
                             <xsl:when test="name() = 'function'">
-                                <a href="{$root}{../@generated-path}#{./full_name}::{./name}()" target="content">
+                                <a href="{$root}files/{../@generated-path}#{./full_name}::{./name}()" target="content">
                                     <xsl:value-of select="./name" />
                                 </a>
                             </xsl:when>
                             <xsl:when test="name() = 'class'">
-                                <a href="{$root}{../@generated-path}#{./full_name}" target="content">
+                                <a href="{$root}files/{../@generated-path}#{./full_name}" target="content">
                                     <xsl:value-of select="./full_name" />
                                 </a>
                             </xsl:when>
                             <xsl:when test="name() = 'constant'">
-                                <a href="{$root}{../@generated-path}#{./full_name}::{./name}" target="content">
+                                <a href="{$root}files/{../@generated-path}#{./full_name}::{./name}" target="content">
                                     <xsl:value-of select="./name" />
                                 </a>
                             </xsl:when>
                             <xsl:when test="name() = 'property'">
-                                <a href="{$root}{../@generated-path}#{./full_name}::{./name}" target="content">
+                                <a href="{$root}files/{../@generated-path}#{./full_name}::{./name}" target="content">
                                     <xsl:value-of select="./name" />
                                 </a>
                             </xsl:when>

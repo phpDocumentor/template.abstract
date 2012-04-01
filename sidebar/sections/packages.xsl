@@ -27,7 +27,7 @@
               <xsl:sort select="name" />
               <li class="closed">
                 <span class="{name()}">
-                  <a href="{$root}{../@generated-path}#::{name}()" target="content">
+                  <a href="{$root}files/{../@generated-path}#::{name}()" target="content">
                     <xsl:value-of select="name" />
                   </a>
                 </span>
@@ -38,7 +38,7 @@
               <xsl:sort select="name" />
               <li>
                 <span class="{name()}">
-                  <a href="{$root}{../@generated-path}#{full_name}" target="content">
+                  <a href="{$root}files/{../@generated-path}#{full_name}" target="content">
                     <xsl:value-of select="name" />
                   </a>
                 </span>
@@ -65,7 +65,7 @@
           <xsl:sort select="name"/>
           <li class="closed">
               <span class="{name()}">
-                  <a href="{$root}{../@generated-path}#::{name}()"
+                  <a href="{$root}files/{../@generated-path}#::{name}()"
                      target="content">
                       <xsl:value-of select="name"/>
                       <br/>
@@ -86,7 +86,7 @@
           <xsl:sort select="name"/>
           <li class="closed">
               <span class="{name()}">
-                  <a href="{$root}{../@generated-path}#{full_name}"
+                  <a href="{$root}files/{../@generated-path}#{full_name}"
                      target="content">
                       <xsl:value-of select="name"/>
                   </a>
@@ -121,7 +121,7 @@
             <xsl:sort select="name" />
             <li>
               <span class="{name()}">
-                <a href="{$root}{../@generated-path}#::{name}()" target="content">
+                <a href="{$root}files/{../@generated-path}#::{name}()" target="content">
                   <xsl:value-of select="name" />
                 </a>
               </span>
@@ -132,7 +132,7 @@
             <xsl:sort select="name" />
             <li>
               <span class="{name()}">
-                <a href="{$root}{../@generated-path}#{full_name}" target="content">
+                <a href="{$root}files/{../@generated-path}#{full_name}" target="content">
                   <xsl:value-of select="name" />
                 </a>
               </span>
