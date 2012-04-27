@@ -4,7 +4,7 @@
   <author>Mike van Riel</author>
   <email>mike.vanriel@naenius.com</email>
   <description>This is a light theme for phpDocumentor that can be used as basis for other themes</description>
-  <version>1.0.2</version>
+  <version>1.0.3</version>
   <transformations>
     <transformation query="copy" writer="FileIo" source="js" artifact="js"/>
     <transformation query="copy" writer="FileIo" source="images" artifact="images"/>
