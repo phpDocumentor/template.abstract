@@ -1,0 +1,12 @@
+{
+    "name": "phpdocumentor/template-abstract",
+    "type": "phpdocumentor-template",
+    "license": "MIT",
+    "repositories":[
+        { "type":"git", "url":"http://github.com/phpDocumentor/UnifiedAssetInstaller" }
+    ],
+    "require": {
+        "ext-xsl": "*",
+        "phpdocumentor/unified-asset-installer": "dev-master"
+    }
+}
