@@ -119,7 +119,7 @@
     </dt>
     <dd>
         <xsl:if test="@link">
-            <a href="{$root}file/{@link}">
+            <a href="{$root}files/{@link}">
                 <xsl:value-of select="@description" disable-output-escaping="yes"/>
             </a>
         </xsl:if>
