@@ -14,7 +14,7 @@
             </xsl:attribute>
 
             <a href="#" class="gripper">
-                <img src="{$root}images/icons/arrow_right.png" alt="&lt;"/>
+                <img src="{$root}images/icons/arrow_right.png" alt="&gt;"/>
                 <img src="{$root}images/icons/arrow_down.png" alt="V" style="display: none;"/>
             </a>
 
