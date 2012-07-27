@@ -2,7 +2,7 @@
         xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
         xmlns:dbx="http://phpdoc.org/xsl/functions"
         xmlns:func="http://exslt.org/functions"
-        extension-element-prefixes="func">
+        extension-element-prefixes="func dbx">
 
     <!-- https://fosswiki.liip.ch/display/BLOG/How+to+define+your+own+XSLT+functions+with+EXSLT -->
     <func:function name="dbx:ucfirst">
