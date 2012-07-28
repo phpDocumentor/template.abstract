@@ -5,6 +5,12 @@
     <xsl:include href="chrome/menu.xsl"/>
     <xsl:include href="chrome/footer.xsl"/>
 
+    <xsl:template match="/">
+        <xsl:call-template name="root">
+            <xsl:with-param name="pageId" select="'frameset'" />
+        </xsl:call-template>
+    </xsl:template>
+    
     <xsl:template name="content">
         <table id="page">
             <thead>
@@ -15,6 +21,11 @@
                     <xsl:call-template name="page-menu" />
                 </td></tr>
             </thead>
+            <tfoot>
+                <tr><td colspan="2" id="db-footer">
+                    <xsl:call-template name="page-footer"/>
+                </td></tr>
+            </tfoot>
             <tbody>
                 <tr>
                     <td id="sidebar">
@@ -25,11 +36,6 @@
                     </td>
                 </tr>
             </tbody>
-            <tfoot>
-                <tr><td colspan="2" id="db-footer">
-                    <xsl:call-template name="page-footer"/>
-                </td></tr>
-            </tfoot>
         </table>
     </xsl:template>
 

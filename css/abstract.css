@@ -5,6 +5,10 @@ html, body, #page {
     width: 100%;
 }
 
+#frameset {
+    overflow:hidden;
+}
+
 body {
     /*font: 80% / 1.5em Arial, Helvetica, "DejaVu Sans", "Liberation sans", "Bitstream Vera Sans", sans-serif*/
 }
@@ -29,6 +33,10 @@ h3 {
 
 #sidebar ul ul {
     margin: 0 0 0 0.6em;
+}
+
+#sidebar, #contents {
+    height:100%;
 }
 
 #sidebar iframe, #contents iframe {
