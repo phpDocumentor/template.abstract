@@ -2,7 +2,7 @@
         xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
         xmlns:dbx="http://phpdoc.org/xsl/functions"
         xmlns:func="http://exslt.org/functions"
-        extension-element-prefixes="func">
+        extension-element-prefixes="func dbx">
 
     <!-- https://fosswiki.liip.ch/display/BLOG/How+to+define+your+own+XSLT+functions+with+EXSLT -->
     <func:function name="dbx:ucfirst">
@@ -118,15 +118,22 @@
       </xsl:call-template>
     </dt>
     <dd>
-        <xsl:if test="@link">
-            <a href="{$root}files/{@link}">
+        <xsl:choose>
+            <xsl:when test="@link">
+                <a>
+                    <xsl:attribute name="href">
+                         <xsl:if test="not(@name = 'license' or @name = 'link' or @name = 'author')">
+                             <xsl:value-of select="$root"/>files/
+                         </xsl:if>
+                         <xsl:value-of select="@link" />
+                    </xsl:attribute>
+                    <xsl:value-of select="@description" disable-output-escaping="yes"/>
+                </a>
+            </xsl:when>
+            <xsl:otherwise>
                 <xsl:value-of select="@description" disable-output-escaping="yes"/>
-            </a>
-        </xsl:if>
-
-        <xsl:if test="not(@link)">
-            <xsl:value-of select="@description" disable-output-escaping="yes"/>
-        </xsl:if>
+            </xsl:otherwise>
+        </xsl:choose>
         &#160;
     </dd>
   </xsl:template>
