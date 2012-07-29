@@ -19,7 +19,7 @@
 
             <code class="title">
                 <img src="{$root}images/icons/property.png" alt="Property"/>
-                <xsl:if test="@visibility"><img src="{$root}images/icons/visibility_{@visibility}.png" style="margin-right: 5px" alt="{@visibility}"/></xsl:if><xsl:if test="docblock/tag[@name='var']/@type"><xsl:apply-templates select="docblock/tag[@name='var']/@type"/>&#160;</xsl:if><span class="highlight"><xsl:value-of select="name"/></span><xsl:if test="default"> = <xsl:value-of select="default"/></xsl:if>
+                <xsl:if test="@visibility"><img src="{$root}images/icons/visibility_{@visibility}.png" style="margin-right: 5px" alt="{@visibility}"/></xsl:if><xsl:if test="docblock/tag[@name='var']/@type"><xsl:apply-templates select="docblock/tag[@name='var']/@type"/>&#160;</xsl:if><span class="highlight"><xsl:value-of select="name"/></span><xsl:if test="default[.!='']"> = <xsl:value-of select="default"/></xsl:if>
             </code>
 
             <div class="description">
@@ -35,7 +35,7 @@
                     <span class="attribute">inherited</span>
                 </xsl:if>
 
-                <xsl:apply-templates select="docblock/description|docblock/tag[@name='var']/@description"/>
+                <xsl:apply-templates select="docblock/description[.!='']|docblock[description[.='']]/tag[@name='var']/@description"/>
                 <xsl:if test="inherited_from">
                     <small class="inherited_from">Inherited from:
                         <xsl:apply-templates
