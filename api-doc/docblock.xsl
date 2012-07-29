@@ -99,10 +99,10 @@
     </xsl:template>
 
 
-  <xsl:template match="docblock/description">
-    <p class="short-description">
-      <xsl:value-of select="." />
-    </p>
+  <xsl:template match="docblock/description[.!='']|docblock[description[.='']]/tag[@name='var']/@description">
+    <div class="short-description">
+      <xsl:value-of select="." disable-output-escaping="yes" />
+    </div>
   </xsl:template>
 
   <xsl:template match="docblock/long-description">
