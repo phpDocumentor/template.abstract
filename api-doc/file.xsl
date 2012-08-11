@@ -1,24 +1,23 @@
 <?xml version="1.0"?>
-
-<xsl:stylesheet version="1.0"
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:dbx="http://phpdoc.org/xsl/functions">
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:dbx="http://phpdoc.org/xsl/functions"
+    exclude-result-prefixes="dbx">
   <xsl:output indent="yes" method="html" />
 
   <xsl:template match="file">
       <h1 class="file">
           <xsl:value-of select="@path" />
           <xsl:if test="source">
-            <a href="{$root}source/{@path}.html"><img src="{$root}images/icons/view_source.png" border="0"/></a>
+            <a href="{$root}source/{@path}.html"><img src="{$root}images/icons/view_source.png" alt="View Source" border="0"/></a>
           </xsl:if>
       </h1>
 
       <div id="file-nav-box">
           <div id="file-nav-options">
               Show:
-              <img src="{$root}images/icons/visibility_public.png" id="show-public"/>
-              <img src="{$root}images/icons/visibility_protected.png" id="show-protected"/>
-              <img src="{$root}images/icons/visibility_private.png" id="show-private"/>
+              <img src="{$root}images/icons/visibility_public.png" alt="Public" id="show-public"/>
+              <img src="{$root}images/icons/visibility_protected.png" alt="Protected" id="show-protected"/>
+              <img src="{$root}images/icons/visibility_private.png" alt="Private" id="show-private"/>
               <span class="attribute" id="show-inherited">inherited</span>
           </div>
 
@@ -42,7 +41,7 @@
                   <xsl:if test="constant">
                   <li>
                       <a href="#functions">
-                          <img src="{$root}images/icons/function.png" height="14"/>
+                          <img src="{$root}images/icons/function.png" alt="Function" height="14"/>
                           Functions
                       </a>
                       <ul>
@@ -57,7 +56,7 @@
                   <xsl:if test="class">
                   <li>
                       <a href="#classes">
-                          <img src="{$root}images/icons/class.png" height="14"/>
+                          <img src="{$root}images/icons/class.png" alt="Class" height="14"/>
                           Classes
                       </a>
                       <ul>

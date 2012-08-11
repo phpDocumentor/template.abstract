@@ -1,8 +1,8 @@
-<xsl:stylesheet version="1.0"
-        xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-        xmlns:dbx="http://phpdoc.org/xsl/functions"
-        xmlns:func="http://exslt.org/functions"
-        extension-element-prefixes="func dbx">
+<?xml version="1.0"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:dbx="http://phpdoc.org/xsl/functions"
+    xmlns:func="http://exslt.org/functions"
+    exclude-result-prefixes="dbx func">
 
     <!-- https://fosswiki.liip.ch/display/BLOG/How+to+define+your+own+XSLT+functions+with+EXSLT -->
     <func:function name="dbx:ucfirst">
