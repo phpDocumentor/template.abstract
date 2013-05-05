@@ -8,12 +8,15 @@
     <xsl:include href="sections/packages.xsl"/>
     <xsl:include href="sections/reports.xsl"/>
 
+    <xsl:param name="section.api.show" />
+    <xsl:param name="section.packages.show" />
+    <xsl:param name="section.namespaces.show" />
+    <xsl:param name="section.files.show" />
+    <xsl:param name="section.files.show-elements" />
+    <xsl:param name="section.charts.show" />
+    <xsl:param name="section.reports.show" />
+
     <xsl:template name="sidebar-sections">
-        <xsl:if test="$section.dashboard.show != 'false'">
-        <h3 id="sidebar-dashboard">
-            <a href="{$root}content.html" target="content">Dashboard</a>
-        </h3>
-        </xsl:if>
 
         <xsl:if test="$section.api.show != 'false'">
             <xsl:if test="count(/project/file/*/docblock/tag[@name='api']|/project/file/class/*/docblock/tag[@name='api']|/project/file/interface/*/docblock/tag[@name='api']) > 0">

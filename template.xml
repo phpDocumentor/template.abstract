@@ -6,6 +6,7 @@
   <description>This is a light theme for phpDocumentor that can be used as basis for other themes</description>
   <version>1.0.3</version>
   <transformations>
+    <transformation query="" writer="xml" source="" artifact="."/>
     <transformation query="copy" writer="FileIo" source="js" artifact="js"/>
     <transformation query="copy" writer="FileIo" source="images" artifact="images"/>
     <transformation query="copy" writer="FileIo" source="templates/abstract/images" artifact="images"/>
@@ -31,7 +32,7 @@
     <transformation query="" writer="xsl" source="templates/abstract/report_deprecated.xsl" artifact="report_deprecated.html"/>
     <transformation query="" writer="xsl" source="templates/abstract/content.xsl" artifact="content.html"/>
     <transformation query="/project/file/@path" writer="xsl" source="templates/abstract/api-doc.xsl" artifact="files/{$path}"/>
-    <transformation query="" writer="sourcecode" source="" artifact=""/>
+    <!--<transformation query="" writer="sourcecode" source="" artifact=""/>-->
     <transformation query="" writer="xsl" source="templates/abstract/graph_class.xsl" artifact="graph.html"/>
     <transformation query="" writer="Graph" source="Class" artifact="classes.svg" />
   </transformations>
