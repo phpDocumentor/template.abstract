@@ -6,7 +6,7 @@
   <description>This is a light theme for phpDocumentor that can be used as basis for other themes</description>
   <version>1.0.3</version>
   <transformations>
-    <transformation query="" writer="xml" source="" artifact="."/>
+    <transformation writer="xml" artifact="structure.xml"/>
     <transformation query="copy" writer="FileIo" source="js" artifact="js"/>
     <transformation query="copy" writer="FileIo" source="images" artifact="images"/>
     <transformation query="copy" writer="FileIo" source="templates/abstract/images" artifact="images"/>
