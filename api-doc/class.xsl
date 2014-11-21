@@ -59,6 +59,15 @@
         </h2>
 
         <div class="class">
+            <div class="description">
+                <xsl:if test="@final='true'">
+                    <span class="attribute">final</span>
+                </xsl:if>
+
+                <xsl:if test="@abstract='true'">
+                    <span class="attribute">abstract</span>
+                </xsl:if>
+            </div>
             <small class="package"><b>Package: </b><xsl:value-of select="@package"/></small>
             <xsl:if test="docblock/description|docblock/long-description">
                 <xsl:apply-templates select="docblock/description"/>
